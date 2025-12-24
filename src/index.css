@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@layer base {
+  :root {
+    /* Warm gold / mustard gold palette */
+    --gold: 43 76% 47%;
+    --gold-light: 43 60% 70%;
+    --gold-dark: 43 80% 35%;
+    
+    /* Off-white / cream backgrounds */
+    --background: 40 30% 98%;
+    --foreground: 220 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Gold as primary */
+    --primary: 43 76% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft cream secondary */
+    --secondary: 40 25% 95%;
+    --secondary-foreground: 220 15% 25%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Gold accent */
+    --accent: 43 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 43 76% 47%;
+
+    --radius: 0.75rem;
+
+    /* Custom shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(220 15% 20% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(220 15% 20% / 0.1);
+    --shadow-gold: 0 4px 20px -4px hsl(43 76% 47% / 0.25);
+
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 40 30% 98%;
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 43 76% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 25% 95%;
+    --sidebar-accent-foreground: 220 15% 25%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 43 76% 47%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 43 70% 55%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 40 15% 60%;
+
+    --accent: 43 65% 50%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 43 70% 55%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 43 70% 55%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 43 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%23C9A227' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
+  }
+
+  .islamic-border {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0z' fill='none' stroke='%23C9A227' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 20px 20px;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43 76% 47%) 0%, hsl(43 60% 55%) 100%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(43 80% 45%) 0%, hsl(43 70% 55%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-xl p-6 md:p-8;
+    box-shadow: var(--shadow-card);
+  }
+}
