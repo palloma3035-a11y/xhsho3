@@ -76,7 +76,7 @@ export const PrayerTimesSection = () => {
                   <div className="text-center">
                     <p className="text-3xl font-bold text-foreground">13:30</p>
                     <p className="text-sm text-muted-foreground">
-                      {t('prayer.khutbah')} 13:00
+                      {t('prayer.khutbah')} 13:30
                     </p>
                   </div>
                 </div>
