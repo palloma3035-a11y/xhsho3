@@ -41,7 +41,7 @@ export const DonationSection = () => {
                     </div>
                     <div>
                       <p className="text-muted-foreground">{t('donate.bank')}</p>
-                      <p className="font-medium text-foreground">Sparkasse Osnabrück</p>
+                      <p className="font-medium text-foreground">Volksbank Osnabrück</p>
                     </div>
                   </div>
                   <div>
@@ -66,7 +66,7 @@ export const DonationSection = () => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://www.paypal.com/paypalme/xhamiashqiptarediaspora"
+                  href="https://www.paypal.com/paypalme/xhamiashqiptarediaspora@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 transition-colors"
